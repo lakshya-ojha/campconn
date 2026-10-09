@@ -1,0 +1,21 @@
+/* ============================
+   App-level Styles
+   ============================ */
+
+.app {
+  position: relative;
+  min-height: 100vh;
+}
+
+.ambient-glow {
+  position: fixed;
+  top: -200px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.05) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+}
