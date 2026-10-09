@@ -1,16 +1,50 @@
-# React + Vite
+# CampConn 🏕️
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+A sleek, real-time, WebRTC-powered video and text chat platform exclusively designed for college campuses. Built with a highly refined, mature monochrome aesthetic, CampConn allows students to connect, interact, and vibe with their peers across different universities. 
 
-Currently, two official plugins are available:
+Designed and optimized for campus fests, this platform makes networking fast, anonymous, and fun.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## ✨ Features
 
-## React Compiler
+- **P2P Video Chat**: Lightning-fast, low-latency video and audio powered by WebRTC.
+- **Real-Time Messaging**: Built-in text chat powered by Socket.io.
+- **Campus Matchmaking**: Filter connections to only meet students from specific campuses (e.g., CGC Landran, Chandigarh University).
+- **Mature Monochrome Theme**: A highly refined, Swiss-inspired brutalist/pixel design with a sleek dark mode.
+- **Friends System**: Add connections and chat with them later.
+- **Robust Connection Handling**: Features an ICE candidate queue and NAT traversal via OpenRelay TURN servers for flawless mobile and cross-network connections.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🚀 Tech Stack
 
-## Expanding the Oxlint configuration
+- **Frontend**: React 19, Vite, React Router v7
+- **Backend**: Node.js, Express, Socket.io
+- **Signaling & Chat**: Custom Socket.io events
+- **P2P Connectivity**: Native WebRTC APIs (RTCPeerConnection)
+- **Styling**: Custom CSS variables, `Inter` and `Pixelify Sans` Google Fonts.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+## 🛠️ Local Development
+
+1. **Install dependencies**
+   ```bash
+   npm install
+   ```
+
+2. **Start the development server** (Runs Vite and the Node backend proxy)
+   ```bash
+   npm run dev
+   ```
+
+3. **Start the signaling server**
+   ```bash
+   npm run server
+   ```
+
+## 🌍 Production Hosting (Render/Railway)
+
+The codebase is pre-configured to host both the React frontend and the Express WebSockets API from a single Node.js instance.
+
+1. Set the **Build Command**: `npm install && npm run build`
+2. Set the **Start Command**: `npm start`
+3. The server will automatically serve the static `dist/` frontend on the same port as the Socket.io API!
+
+## 📜 License
+MIT
